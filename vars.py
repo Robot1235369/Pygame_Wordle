@@ -19,8 +19,9 @@ FPS = 60
 BACKGROUND = (15, 15, 15)
 WHITE = (255, 255, 255)
 BOX_COLOR = (150, 150, 150)
-GREEN = (0, 255, 0)
-YELLOW = (255, 255, 0)
+GREEN = (50, 205, 50)
+YELLOW = (255, 215, 0)
+GREY = (128, 128, 128)
 
 title_font = pygame.font.Font('freesansbold.ttf', 50)
 font = pygame.font.Font('freesansbold.ttf', 60)

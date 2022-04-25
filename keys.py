@@ -8,6 +8,19 @@ def leave():
     print("You lost")
     exit()
 
+def check(guess):
+    global guess_num
+    global answer
+    for i in range(len(guess)):
+        if guess[i] == answer[i]:
+            boxes[guess_num][i].change_color("green")
+            count += 1
+        elif guess[i] in answer:
+            boxes[guess_num][i].change_color("yellow")
+        else:
+            boxes[guess_num][i].change_color("grey")
+
+
 def type(event):
     global guess
     global guess_num
@@ -29,6 +42,7 @@ def type(event):
                     guess_num += 1
                     print(guess_num)
                     guess = ""
+                    check(guess)
         if event.key == pygame.K_BACKSPACE:
             list = []
             for i in range(len(guess)):

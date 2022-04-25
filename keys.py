@@ -11,6 +11,7 @@ def leave():
 def check(guess):
     global guess_num
     global answer
+    global win
     for i in range(len(guess)):
         if guess[i] == answer[i]:
             boxes[guess_num][i].change_color("green")
@@ -19,6 +20,8 @@ def check(guess):
             boxes[guess_num][i].change_color("yellow")
         else:
             boxes[guess_num][i].change_color("grey")
+    if count == 5:
+        win = True
 
 
 def type(event):

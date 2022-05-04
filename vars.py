@@ -43,3 +43,4 @@ guess_num = 0
 guess = ""
 word = answers[randint(0, len(answers) - 1)]
 letters = [[], [], [], [], [], []]
+win = False
